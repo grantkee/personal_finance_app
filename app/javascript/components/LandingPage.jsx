@@ -23,7 +23,7 @@ const LandingPage = () => {
         <Grid container item xs={12} justify="center">
           <Grid item xs={3}>
             <Link
-              to="/dashboard"
+              to="/expenses"
               className={classes.btnOne}
               role="button"
             >

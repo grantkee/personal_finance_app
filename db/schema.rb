@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_191206) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
+  
   create_table "transactions", force: :cascade do |t|
     t.decimal "amount", precision: 7, scale: 2
     t.bigint "expense_id", null: false
@@ -33,5 +33,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_191206) do
     t.index ["expense_id"], name: "index_transactions_on_expense_id"
   end
 
+  add_foreign_key "histories", "expenses"
   add_foreign_key "transactions", "expenses"
 end
