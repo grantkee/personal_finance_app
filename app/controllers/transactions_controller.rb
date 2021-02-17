@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   def create
     @expense = Expense.find(params[:expense_id])
-    @transaction = @expense.transactions.create(comment_params)
+    @transaction = @expense.transactions.create(transaction_params)
 
     redirect_to expense_path(@expense)
   end
@@ -15,7 +15,7 @@ class TransactionsController < ApplicationController
   end
 
   private
-    def comment_params
-      params.require(:comment).permit(:amount)
+    def transaction_params
+      params.require(:transaction).permit(:amount)
     end
 end
