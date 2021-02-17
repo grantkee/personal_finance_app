@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../components/LandingPage';
-import Dashboard from '../components/Dashboard';
+import Expenses from '../components/Expenses';
 
 export default (
   <Router>
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/expenses" exact component={Expenses} />
     </Switch>
   </Router>
 );
