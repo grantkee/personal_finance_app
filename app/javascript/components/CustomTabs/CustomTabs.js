@@ -9,7 +9,7 @@ import Card from '../Card/Card';
 import CardBody from '../Card/CardBody';
 import CardHeader from '../Card/CardHeader';
 
-import styles from '../../assets/jss/dashboard/components/customTabsStyle';
+import styles from '../../../assets/jss/dashboard/components/customTabsStyle';
 
 const useStyles = makeStyles(styles);
 

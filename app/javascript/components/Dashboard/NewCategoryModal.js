@@ -12,7 +12,7 @@ import ColorOptions from '../Modal/ColorOptions';
 import IconOptions from '../Modal/IconOptions';
 
 //TODO
-// import styles from '../../assets/jss/dashboard/components/cardStyles';
+// import styles from '../../../assets/jss/dashboard/components/cardStyles';
 // const useStyles = makeStyles(styles);
 
 const NewCategoryModal = (props) => {

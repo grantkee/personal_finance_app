@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 
-import styles from '../../assets/jss/dashboard/components/iconOptionsStyle';
+import styles from '../../../assets/jss/dashboard/components/iconOptionsStyle';
 
 const useStyles = makeStyles(styles);
 

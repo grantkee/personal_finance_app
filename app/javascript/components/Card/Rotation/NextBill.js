@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-import styles from '../../../assets/jss/dashboard/views/dashboardStyle';
+import styles from '../../../../assets/jss/dashboard/views/dashboardStyle';
 
 const useStyles = makeStyles(styles);
 

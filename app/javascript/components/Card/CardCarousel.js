@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import styles from '../../assets/jss/dashboard/components/cardBodyStyle';
+import styles from '../../../assets/jss/dashboard/components/cardBodyStyle';
 import ArrowBody from './Rotation/ArrowBody';
 import NextBill from './Rotation/NextBill';
 import NextPaycheck from './Rotation/NextPaycheck';

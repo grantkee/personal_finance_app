@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../../assets/jss/dashboard/components/cardBodyStyle';
+import styles from '../../../assets/jss/dashboard/components/cardBodyStyle';
 
 const useStyles = makeStyles(styles);
 

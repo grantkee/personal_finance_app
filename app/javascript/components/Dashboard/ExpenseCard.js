@@ -14,7 +14,7 @@ import CardIcon from '../Card/CardIcon';
 import CardBody from '../Card/CardBody';
 import CardCarousel from '../Card/CardCarousel';
 import CardFooter from '../Card/CardFooter';
-import styles from '../../assets/jss/dashboard/views/dashboardStyle';
+import styles from '../../../assets/jss/dashboard/views/dashboardStyle';
 
 const useStyles = makeStyles(styles);
 

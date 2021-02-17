@@ -1,6 +1,6 @@
 import React from 'react';
-import { bugs, website, server } from '../../mockData/tabs';
-import { addExpenseCat } from '../../redux/actions';
+import { bugs, website, server } from '../mockData/tabs';
+// import { addExpenseCat } from '../../redux/actions';
 
 //charts plugin for react
 import ChartistGraph from 'react-chartist';
@@ -29,30 +29,30 @@ import AttachFileRoundedIcon from '@material-ui/icons/AttachFileRounded';
 import FastfoodRoundedIcon from '@material-ui/icons/FastfoodRounded';
 import ShoppingCartRoundedIcon from '@material-ui/icons/ShoppingCartRounded';
 // main components
-import GridContainer from '../../components/Grid/GridContainer'
-import GridItem from '../../components/Grid/GridItem';
-import Card from '../../components/Card/Card';
-import CardHeader from '../../components/Card/CardHeader';
-import CardIcon from '../../components/Card/CardIcon';
-import CardFooter from '../../components/Card/CardFooter';
-import CardBody from '../../components/Card/CardBody';
-import Danger from '../../components/Typography/Danger';
-import CustomTabs from '../../components/CustomTabs/CustomTabs';
-import Tasks from '../../components/Tasks/Tasks';
-// import Warning from '../../components/Typography/Warning';
-import NewCategoryModal from '../../containers/Dashboard/NewCategoryModal';
+import GridContainer from '../components/Grid/GridContainer'
+import GridItem from '../components/Grid/GridItem';
+import Card from '../components/Card/Card';
+import CardHeader from '../components/Card/CardHeader';
+import CardIcon from '../components/Card/CardIcon';
+import CardFooter from '../components/Card/CardFooter';
+import CardBody from '../components/Card/CardBody';
+// import Danger from '../components/Typography/Danger';
+import CustomTabs from '../components/CustomTabs/CustomTabs';
+import Tasks from '../components/Tasks/Tasks';
+// import Warning from '../components/Typography/Warning';
+import NewCategoryModal from './Dashboard/NewCategoryModal';
 
 import styles from '../../assets/jss/dashboard/views/dashboardStyle.js';
 
-import mockExpenses from '../../mockData/expenses';
-import ExpenseCard from '../../containers/Dashboard/ExpenseCard';
+import mockExpenses from '../mockData/expenses';
+import ExpenseCard from './Dashboard/ExpenseCard';
 
 import {
   dailySalesChart,
   emailsSubscriptionChart,
   completedTasksChart,
   financialProgress,
-} from '../../mockData/chart';
+} from '../mockData/chart';
 
 const iconOptions = {
   a: <HomeRoundedIcon />,
