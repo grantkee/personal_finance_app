@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'expenses/index'
   root 'landing#index'
+
+  resources :expenses
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
