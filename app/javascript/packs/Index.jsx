@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import chinese_rocks_woff2 from '../../assets/fonts/chinese_rocks/chinese_rocks_rg-webfont.woff2';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
+import chinese_rocks_woff2 from '../../../public/fonts/chinese_rocks/chinese_rocks_rg-webfont.woff2';
 import App from "../components/App";
 
 const chinese_rocks_rg = {
@@ -24,7 +24,7 @@ const chinese_rocks_rg = {
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: 'chinese_rocks_rg, Arial',
+    fontFamily: 'chinese_rocks_rg, Roboto, Arial',
   },
   overrides: {
     MuiCssBaseline: {
