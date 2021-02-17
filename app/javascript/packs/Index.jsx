@@ -23,6 +23,11 @@ const chinese_rocks_rg = {
 };
 
 const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#90caf9'
+    }
+  },
   typography: {
     fontFamily: 'chinese_rocks_rg, Roboto, Arial',
   },
