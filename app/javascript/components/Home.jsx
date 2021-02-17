@@ -1,7 +1,8 @@
+import { Home } from "@material-ui/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default () => (
+const Home = () => (
   <div className="vw-100 vh-100 primary-color d-flex align-items-center justify-content-center">
     <div className="jumbotron jumbotron-fluid bg-transparent">
       <div className="container secondary-color">
@@ -21,3 +22,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default Home;
