@@ -12,7 +12,7 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.new(name: "school", budget_total: 123.45, current_total: 0.00, color: "red", icon: "1", history: "")
+    @expense = Expense.new(expense_params)
 
     if @expense.save
       redirect_to @expense
@@ -22,12 +22,24 @@ class ExpensesController < ApplicationController
   end
 
   def edit
+    @expense = Expense.find(params[:id])
   end
 
   def update
+    @expense = Expense.find(params[:id])
+
+    if @expense.update(expense_params)
+      redirect_to @expense
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @expense = Expense.find(params[:id])
+    @expense.destroy
+
+    redirect_to expenses_path
   end
 
   private
