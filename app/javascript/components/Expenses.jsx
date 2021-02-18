@@ -19,10 +19,10 @@ const Expenses = (props) => {
     <div>
       Hii
       {expensesArr.map(exp => (
-        <div style="border: 1px solid black; margin: 15px;">
-          <p>exp.name</p>
-          <p>exp.budget_total</p>
-          <p>exp.current_total</p>
+        <div key={exp.name} style={{border: "1px solid black", margin: "15px"}}>
+          <p>{exp.name}</p>
+          <p>{exp.budget_total}</p>
+          <p>{exp.current_total}</p>
         </div>
       ))}
     </div>
