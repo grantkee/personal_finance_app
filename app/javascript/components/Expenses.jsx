@@ -1,7 +1,7 @@
-import { useEventCallback } from '@material-ui/core';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Expenses = (props) => {
+  const [ expensesArr, setExpensesArr ] = useState([]);
   useEffect(() => {
     const uri = '/expenses';
     fetch(uri)
@@ -11,13 +11,20 @@ const Expenses = (props) => {
         }
         throw new Error('Network response not ok.');
       })
-      .then(res => console.log('res', res))
+      .then(res => setExpensesArr(res))
       .catch(err => console.log(err))
   }, []);
 
   return (
     <div>
       Hii
+      {expensesArr.map(exp => (
+        <div style="border: 1px solid black; margin: 15px;">
+          <p>exp.name</p>
+          <p>exp.budget_total</p>
+          <p>exp.current_total</p>
+        </div>
+      ))}
     </div>
   );
 };
