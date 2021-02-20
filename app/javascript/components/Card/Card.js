@@ -1,6 +1,6 @@
 import React from 'react';
 // node library for concatenating classes
-import classNames from 'classnames';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from '../../assets/jss/dashboard/components/cardStyles';
@@ -10,7 +10,7 @@ const useStyles = makeStyles(styles);
 const Card = (props) => {
   const classes = useStyles();
   const { className, children, plain, profile, chart, ...rest } = props;
-  const cardClasses = classNames({
+  const cardClasses = classnames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile,
