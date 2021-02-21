@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../../assets/jss/dashboard/components/cardStyles';
+import styles from '../../useStyles/Card/cardStyles';
 
 const useStyles = makeStyles(styles);
 
@@ -12,9 +12,9 @@ const Card = (props) => {
   const { className, children, plain, profile, chart, ...rest } = props;
   const cardClasses = classnames({
     [classes.card]: true,
-    [classes.cardPlain]: plain,
-    [classes.cardProfile]: profile,
-    [classes.cardChart]: chart,
+    // [classes.cardPlain]: plain,
+    // [classes.cardProfile]: profile,
+    // [classes.cardChart]: chart,
     [className]: className !== undefined
   });
 
