@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles'
-import styles from '../../useStyles/Grid/Grid';
+import styles from '../../useStyles/Grid/grid';
 
 const useStyles = makeStyles(styles);
 
