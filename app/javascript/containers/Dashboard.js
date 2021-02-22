@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Dashboard from '../views/Dashboard-main/Dashboard';
+import Dashboard from '../';
 import {openModal} from '../redux/actions';
 
 const mapStateToProps = (state) => ({
