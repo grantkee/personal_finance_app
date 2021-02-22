@@ -6,7 +6,7 @@ import {
   primaryCardHeader,
   roseCardHeader,
   grayColor
-} from "../../main";
+} from "../main";
 
 const cardIconStyle = {
   cardIcon: {

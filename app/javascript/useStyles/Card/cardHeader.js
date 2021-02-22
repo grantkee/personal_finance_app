@@ -6,7 +6,7 @@ import {
   primaryCardHeader,
   roseCardHeader,
   whiteColor
-} from "../../main";
+} from "../main";
 
 const cardHeaderStyle = {
   cardHeader: {
