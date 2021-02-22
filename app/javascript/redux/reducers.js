@@ -12,6 +12,16 @@ const isOpen = (state = initialState, action) => {
   }
 };
 
+const expenseCategories = (state = initialState, action) => {
+  switch(action.type){
+    case 'ADD_EXPENSE_CAT':
+      return [...state, action.value];
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   isOpen,
+  expenseCategories,
 });
