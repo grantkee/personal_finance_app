@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import DoneIcon from '@material-ui/icons/Done';
 
-import styles from '../../assets/jss/dashboard/components/colorOptionsStyle';
+import styles from '../../useStyles/Modal/colorOptionsStyle';
 
 const useStyles = makeStyles(styles);
 
