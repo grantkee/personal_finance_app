@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../components/views/LandingPage';
-import Expenses from '../components/views/Expenses';
+import Home from '../views/LandingPage';
+import Expenses from '../containers/Expenses';
 
 export default (
   <Router>
