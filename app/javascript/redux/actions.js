@@ -8,11 +8,6 @@ export const closeModal = () => ({
   value: false
 });
 
-// export const addExpenseCat = (form) => ({
-//   type: 'ADD_EXPENSE_CAT',
-//   value: form
-// });
-
 export const postExpenseCat = (form) => {
   const token = document.querySelector('meta[name="csrf-token"]').content;
   return (
@@ -43,25 +38,3 @@ export const postExpenseCat = (form) => {
     }
   );
 };
-
-// export const login = (creds) => (
-//   dispatch => {
-//     fetch('/auth/login', {
-//       method: 'POST',
-//       headers: {'Content-Type': 'application/json'},
-//       body: JSON.stringify(creds)
-//     })
-//     .then(res => res.json())
-//     .then(response => {
-//       const action = {
-//         type: 'LOGIN',
-//         username: response.data.username,
-//         value: true,
-//       }
-//       localStorage.setItem('token', response.accessToken);
-//       dispatch(action);
-//       // document.cookie = `token=${response.accessToken};`;
-//     })
-//     .catch(error => console.log('LOGIN ERROR:', error));
-//   }
-// );
