@@ -21,6 +21,20 @@ const expenseCategories = (state = initialState, action) => {
   }
 };
 
+// const user = (state = initialState, action) => {
+//   switch(action.type) {
+//     case 'SIGNUP':
+//       return {...state, signup: true};
+//     case 'LOGIN':
+//       return {username: action.username, isOn: action.value, signup: false};
+//     case 'LOGOUT':
+//       localStorage.removeItem('token');
+//       return {...state, username: '', isOn: action.value, signup: false};
+//     default:
+//       return state;
+//   }
+// }
+
 export default combineReducers({
   isOpen,
   expenseCategories,
