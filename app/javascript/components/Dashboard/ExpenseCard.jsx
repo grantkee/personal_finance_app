@@ -17,13 +17,13 @@ const useStyles = makeStyles(styles);
 
 const ExpenseCard = (props) => {
   const classes = useStyles();
-  const { expense, iconOptions } = props;
+  const { expense, iconOptions, colorOptions } = props;
   console.log('expense:', expense);
   const {
     id,
-    category,
-    total,
-    current,
+    name,
+    budget_total,
+    current_total,
     color,
     icon,
     createdAt,
@@ -38,22 +38,22 @@ const ExpenseCard = (props) => {
     <GridItem xs={12} sm={6} md={3}>
       <Link to={`/expenses/${id}`} style={{textDecoration: 'none'}}>
         <Card>
-          <CardHeader color={color} stats icon>
-            <CardIcon color={color}>
+          <CardHeader color={colorOptions[color]} stats icon>
+            <CardIcon color={colorOptions[color]}>
               {iconOptions[icon]}
             </CardIcon>
-            <p className={classes.cardCategory}>{category}</p>
-            <h3 className={classes.cardTitle}>{`$${current} spent`}</h3>
+            <p className={classes.cardCategory}>{name}</p>
+            <h3 className={classes.cardTitle}>{`$${current_total} spent`}</h3>
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>{`$${total} BUDGET`}</h4>
+            <h4 className={classes.cardTitle}>{`$${budget_total} BUDGET`}</h4>
             {/* <p className={classes.cardCategory}>
               <span className={textColor[color]}>
                 <ArrowUpward className={classes.upArrowCardCategory} /> 65%
               </span>{" "}
               increase in spending today.
             </p> */}
-            <CardCarousel color={color} />
+            <CardCarousel color={colorOptions[color]} />
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
