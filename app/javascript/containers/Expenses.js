@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import Expense from '../views/Expenses';
 import {openModal} from '../redux/actions';
 import Expenses from '../views/Expenses';
 

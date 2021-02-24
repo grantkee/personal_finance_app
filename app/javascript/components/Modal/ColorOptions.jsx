@@ -19,8 +19,7 @@ const ColorOptions = (props) => {
     'rose',
     'gray'
   ];
-  
-  console.log('current color in child', color);
+
   const handleChange = (e) => {
     setColor(e.target.value);
   };
