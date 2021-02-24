@@ -16,7 +16,7 @@ const useStyles = makeStyles(styles);
 
 const NewCategoryModal = (props) => {
   const classes = useStyles();
-  const { isOpen, closeModal, expenseCategories, addExpenseCat, iconOptions } = props;
+  const { isOpen, closeModal, expenseCategories, postExpenseCat, iconOptions } = props;
   // const [ category, setCategory ] = useState('');
   // const [ total, setTotal ] = useState('');
   const [ color, setColor ] = useState('primary');
@@ -45,7 +45,7 @@ const NewCategoryModal = (props) => {
       lastUpdated: Date.now(),
     };
     const form = Object.assign(input, remainingInfo);
-    addExpenseCat(form);
+    postExpenseCat(form);
     setColor('primary');
     setIcon('a');
     closeModal();
