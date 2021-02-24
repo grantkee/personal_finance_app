@@ -17,7 +17,7 @@ export const postExpenseCat = (form) => {
   const token = document.querySelector('meta[name="csrf-token"]').content;
   return (
     dispatch => {
-      fetch('/expenses/create', {
+      fetch('/expenses', {
         method: 'POST',
         headers: {
           'X-CSRF-TOKEN': token,
