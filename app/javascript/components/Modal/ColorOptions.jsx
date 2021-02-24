@@ -8,17 +8,9 @@ import styles from '../../useStyles/Modal/colorOptionsStyle';
 const useStyles = makeStyles(styles);
 
 const ColorOptions = (props) => {
-  const { color, setColor } = props;
+  const { color, setColor, colorOptions } = props;
   const classes = useStyles();
-  const options = [
-    'primary',
-    'warning',
-    'danger',
-    'info',
-    'success',
-    'rose',
-    'gray'
-  ];
+  const options = Object.values(colorOptions);
 
   const handleChange = (e) => {
     setColor(e.target.value);
@@ -26,24 +18,24 @@ const ColorOptions = (props) => {
 
   return (
     <>
-    <h5>Color:</h5>
-    <div className={classes.container}>
-      {options.map(o => {
-        return (
-          <div key={o} className={`${classes.itemContainer} ${classes[o]}`}>
-            <Radio
-              key={o}
-              className={`${classes.badge} ${classes[o]} ${color === o ? classes.active : ''}`}
-              checked={color === o}
-              onChange={handleChange}
-              value={o}
-              color="default"
-              checkedIcon={<DoneIcon />}
-            />
-          </div>
-        )
-      })}
-    </div>
+      <h5>Color:</h5>
+      <div className={classes.container}>
+        {options.map(o => {
+          return (
+            <div key={o} className={`${classes.itemContainer} ${classes[o]}`}>
+              <Radio
+                key={o}
+                className={`${classes.badge} ${classes[o]} ${color === o ? classes.active : ''}`}
+                checked={color === o}
+                onChange={handleChange}
+                value={o}
+                color="default"
+                checkedIcon={<DoneIcon />}
+              />
+            </div>
+          )
+        })}
+      </div>
     </>
   );
 };

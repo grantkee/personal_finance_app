@@ -41,6 +41,16 @@ const Expenses = (props) => {
     g: <ShoppingCartRoundedIcon />,
   };
 
+  const colorOptions = {
+    '0': 'primary',
+    '1': 'warning',
+    '2': 'danger',
+    '3': 'info',
+    '4': 'success',
+    '5': 'rose',
+    '6': 'gray',
+  };
+
   return (
     <GridContainer>
       <GridItem>
@@ -48,11 +58,11 @@ const Expenses = (props) => {
           <LibraryAddIcon fontSize="large" />
         </IconButton>
         <h1>Add category</h1>
-        <NewCategoryModal iconOptions={iconOptions} />
+        <NewCategoryModal iconOptions={iconOptions} colorOptions={colorOptions} />
       </GridItem>
 
       {expensesArr.map(exp => (
-        <ExpenseCard key={exp.id} expense={exp} iconOptions={iconOptions} />
+        <ExpenseCard key={exp.id} expense={exp} iconOptions={iconOptions} colorOptions={colorOptions} />
       ))}
     </GridContainer>
   );
