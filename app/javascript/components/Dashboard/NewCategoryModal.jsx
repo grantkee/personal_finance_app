@@ -24,7 +24,7 @@ const NewCategoryModal = (props) => {
   // const [ icon, setIcon ] = useState(0);
   // const [ time, setTime ] = useState(0);
   const [ input, setInput ] = useState({});
-  const categoryId = expenseCategories.length + 1;
+
 
   const handleChange = (e) => {
     e.persist();
@@ -34,15 +34,11 @@ const NewCategoryModal = (props) => {
   const handleSubmit = () => {
     // setTime(Date.now());
     const remainingInfo = {
-      id: categoryId,
-      user_id: 33,
-      // category: category,
-      // total: total,
+      // name: category,
+      // budget_total: total,
+      current_total: 0,
       color: color,
-      current: '0',
       icon: icon,
-      createdAt: Date.now(),
-      lastUpdated: Date.now(),
     };
     const form = Object.assign(input, remainingInfo);
     postExpenseCat(form);
@@ -64,7 +60,7 @@ const NewCategoryModal = (props) => {
         <TextField
           autoFocus
           margin="dense"
-          name="category"
+          name="name"
           label="Expense Category"
           type="text"
           fullWidth
@@ -72,7 +68,7 @@ const NewCategoryModal = (props) => {
         />
         <TextField
           margin="dense"
-          name="total"
+          name="budget_total"
           label="Total"
           type="number"
           fullWidth
