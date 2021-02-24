@@ -12,6 +12,7 @@ import ShoppingCartRoundedIcon from '@material-ui/icons/ShoppingCartRounded';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import NewCategoryModal from '../containers/Dashboard/NewCategoryModal';
+import ExpenseCard from '../containers/Dashboard/ExpenseCard';
 
 const Expenses = (props) => {
   const { openModal } = props;
@@ -51,11 +52,7 @@ const Expenses = (props) => {
       </GridItem>
 
       {expensesArr.map(exp => (
-        <GridItem key={exp.name} style={{border: "1px solid black", margin: "15px"}}>
-          <p>{exp.name}</p>
-          <p>{exp.budget_total}</p>
-          <p>{exp.current_total}</p>
-        </GridItem>
+        <ExpenseCard key={exp.id} expense={exp} iconOptions={iconOptions} />
       ))}
     </GridContainer>
   );

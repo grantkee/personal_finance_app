@@ -18,7 +18,9 @@ const useStyles = makeStyles(styles);
 const ExpenseCard = (props) => {
   const classes = useStyles();
   const { expense, iconOptions } = props;
+  console.log('expense:', expense);
   const {
+    id,
     category,
     total,
     current,
@@ -34,7 +36,7 @@ const ExpenseCard = (props) => {
 
   return (
     <GridItem xs={12} sm={6} md={3}>
-      <Link to={`/expenses/${category.toLowerCase()}`} style={{textDecoration: 'none'}}>
+      <Link to={`/expenses/${id}`} style={{textDecoration: 'none'}}>
         <Card>
           <CardHeader color={color} stats icon>
             <CardIcon color={color}>

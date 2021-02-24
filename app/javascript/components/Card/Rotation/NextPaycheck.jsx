@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-import styles from '../../../assets/jss/dashboard/views/dashboardStyle';
+import styles from '../../../useStyles/dashboardStyle';
 
 const useStyles = makeStyles(styles);
 
