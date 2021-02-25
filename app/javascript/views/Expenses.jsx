@@ -47,7 +47,6 @@ const Expenses = (props) => {
     '1': 'warning',
     '2': 'danger',
     '3': 'info',
-    '4': 'success',
     'success': 'success',
     '5': 'rose',
     '6': 'gray',
