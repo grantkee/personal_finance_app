@@ -30,11 +30,6 @@ const ExpenseCard = (props) => {
     lastUpdated,
   } = expense;
 
-  console.log('iconOptions', iconOptions);
-  console.log('icon', icon);
-  console.log('color', color);
-  console.log('iconOptions[icon]=', iconOptions[icon]);
-
   return (
     <GridItem xs={12} sm={6} md={3}>
       <Link to={`/expenses/${id}`} style={{textDecoration: 'none'}}>
