@@ -32,13 +32,14 @@ const Expenses = (props) => {
 
 
   const iconOptions = {
-    a: <HomeRoundedIcon />,
-    b: <FavoriteRoundedIcon />,
-    c: <AcUnitRoundedIcon />,
-    d: <AirplanemodeActiveRoundedIcon />,
-    e: <AttachFileRoundedIcon />,
-    f: <FastfoodRoundedIcon />,
-    g: <ShoppingCartRoundedIcon />,
+    '0': <HomeRoundedIcon />,
+    'd': <HomeRoundedIcon />,
+    '1': <FavoriteRoundedIcon />,
+    '2': <AcUnitRoundedIcon />,
+    '3': <AirplanemodeActiveRoundedIcon />,
+    '4': <AttachFileRoundedIcon />,
+    '5': <FastfoodRoundedIcon />,
+    '6': <ShoppingCartRoundedIcon />,
   };
 
   const colorOptions = {
@@ -47,6 +48,7 @@ const Expenses = (props) => {
     '2': 'danger',
     '3': 'info',
     '4': 'success',
+    'success': 'success',
     '5': 'rose',
     '6': 'gray',
   };

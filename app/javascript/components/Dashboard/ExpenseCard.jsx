@@ -32,6 +32,7 @@ const ExpenseCard = (props) => {
 
   console.log('iconOptions', iconOptions);
   console.log('icon', icon);
+  console.log('color', color);
   console.log('iconOptions[icon]=', iconOptions[icon]);
 
   return (
