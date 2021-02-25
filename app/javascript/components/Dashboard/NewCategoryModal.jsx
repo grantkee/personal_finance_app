@@ -16,7 +16,7 @@ const useStyles = makeStyles(styles);
 
 const NewCategoryModal = (props) => {
   const classes = useStyles();
-  const { isOpen, closeModal, expenseCategories, postExpenseCat, iconOptions } = props;
+  const { isOpen, closeModal, expenseCategories, postExpenseCat, iconOptions, colorOptions } = props;
   // const [ category, setCategory ] = useState('');
   // const [ total, setTotal ] = useState('');
   const [ color, setColor ] = useState('primary');
@@ -82,7 +82,7 @@ const NewCategoryModal = (props) => {
           fullWidth
           onChange={handleChange}
         /> */}
-        <ColorOptions color={color} setColor={setColor} />
+        <ColorOptions color={color} setColor={setColor} colorOptions={colorOptions} />
         <IconOptions icon={icon} setIcon={setIcon} iconOptions={iconOptions} />
       </DialogContent>
       <DialogActions>
