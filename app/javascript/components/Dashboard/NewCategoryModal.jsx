@@ -10,35 +10,40 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import ColorOptions from '../Modal/ColorOptions';
 import IconOptions from '../Modal/IconOptions';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+import Favorite from '@material-ui/icons/Favorite'
 import styles from '../../useStyles/dashboardStyle';
 
 const useStyles = makeStyles(styles);
 
 const NewCategoryModal = (props) => {
   const classes = useStyles();
-  const { isOpen, closeModal, expenseCategories, postExpenseCat, iconOptions, colorOptions } = props;
-  // const [ category, setCategory ] = useState('');
-  // const [ total, setTotal ] = useState('');
+  const { isOpen, closeModal, postExpenseCat, iconOptions, colorOptions } = props;
   const [ color, setColor ] = useState('primary');
-  const [ icon, setIcon ] =useState('a');
-  // const [ icon, setIcon ] = useState(0);
-  // const [ time, setTime ] = useState(0);
-  const [ input, setInput ] = useState({});
+  const [ icon, setIcon ] = useState('a');
+  const [ input, setInput ] = useState({income: false});
 
 
   const handleChange = (e) => {
     e.persist();
     setInput(input => ({...input, [e.target.name]: e.target.value}));
-  }
+  };
+
+  const handleCheck = (e) => {
+    setInput(input => ({...input, [e.target.name]: e.target.checked}));
+  };
   
   const handleSubmit = () => {
-    // setTime(Date.now());
     const remainingInfo = {
       // name: category,
-      // budget_total: total,
+      // budget_total: $,
       current_total: 0,
       color: color,
       icon: icon,
+      // income: false,
     };
     const form = Object.assign(input, remainingInfo);
     postExpenseCat(form);
@@ -46,8 +51,6 @@ const NewCategoryModal = (props) => {
     setIcon('a');
     closeModal();
   };
-
-  console.log('color in modal parent', color);
 
   return (
     <Dialog open={isOpen} onClose={closeModal} disableBackdropClick aria-labelledby="form-dialog-title">
@@ -74,16 +77,21 @@ const NewCategoryModal = (props) => {
           fullWidth
           onChange={handleChange}
         />
-        {/* <TextField
-          margin="dense"
-          name="color"
-          label="color"
-          type="text"
-          fullWidth
-          onChange={handleChange}
-        /> */}
         <ColorOptions color={color} setColor={setColor} colorOptions={colorOptions} />
         <IconOptions icon={icon} setIcon={setIcon} iconOptions={iconOptions} />
+        <FormGroup row>
+          <FormControlLabel
+            control={
+              <Checkbox
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+                name="income"
+                onChange={handleCheck}
+              />
+            }
+            label="Source of Income"
+          />
+        </FormGroup>
       </DialogContent>
       <DialogActions>
         <Button onClick={closeModal} color="primary">
@@ -102,4 +110,7 @@ export default NewCategoryModal;
 NewCategoryModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func,
+  postExpenseCat: PropTypes.func.isRequired,
+  iconOptions: PropTypes.object.isRequired,
+  colorOptions: PropTypes.object.isRequired,
 };
