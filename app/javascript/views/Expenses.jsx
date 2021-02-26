@@ -33,7 +33,6 @@ const Expenses = (props) => {
 
   const iconOptions = {
     '0': <HomeRoundedIcon />,
-    'd': <HomeRoundedIcon />,
     '1': <FavoriteRoundedIcon />,
     '2': <AcUnitRoundedIcon />,
     '3': <AirplanemodeActiveRoundedIcon />,
@@ -47,7 +46,7 @@ const Expenses = (props) => {
     '1': 'warning',
     '2': 'danger',
     '3': 'info',
-    'success': 'success',
+    '4': 'success',
     '5': 'rose',
     '6': 'gray',
   };
