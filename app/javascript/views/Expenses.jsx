@@ -54,7 +54,7 @@ const Expenses = (props) => {
 
   return (
     <GridContainer>
-      <GridItem>
+      <GridItem xs={12}>
         <IconButton color="primary" onClick={openModal} aria-label="add category">
           <LibraryAddIcon fontSize="large" />
         </IconButton>
