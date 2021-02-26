@@ -31,7 +31,7 @@ const ExpenseCard = (props) => {
   } = expense;
 
   return (
-    <GridItem xs={12} sm={6} md={3}>
+    <GridItem xs={12} sm={6} md={4}>
       <Link to={`/expenses/${id}`} style={{textDecoration: 'none'}}>
         <Card>
           <CardHeader color={colorOptions[color]} stats icon>
