@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'landing#index'
 
-  resources :expenses do
-    resources :transactions
+  resoureces :categories do
+    resources :expenses do
+      resources :transactions
+    end
   end
 end
