@@ -1,4 +1,4 @@
 class Expense < ApplicationRecord
-  belongs_to :expense_category
+  belongs_to :category
   has_one :due_date
 end

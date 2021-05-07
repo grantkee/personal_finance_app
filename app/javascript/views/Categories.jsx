@@ -30,6 +30,7 @@ const Categories = (props) => {
       .catch(err => console.log(err))
   }, []);
 
+  console.log("categories:", categoriesArr);
 
   const iconOptions = {
     '0': <HomeRoundedIcon />,

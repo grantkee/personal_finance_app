@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :expense_categories
+  has_many :expenses
 end

@@ -1,3 +1,3 @@
 class DueDate < ApplicationRecord
-  belongs_to :category_expense
+  belongs_to :expense
 end
