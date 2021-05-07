@@ -16,7 +16,7 @@ import CategoryCard from '../containers/Dashboard/CategoryCard';
 
 const Expenses = (props) => {
   const { openModal } = props;
-  const [ expensesArr, setExpensesArr ] = useState([]);
+  const [ categoriesArr, setCategoriesArr ] = useState([]);
   useEffect(() => {
     const uri = '/categories';
     fetch(uri)
@@ -26,7 +26,7 @@ const Expenses = (props) => {
         }
         throw new Error('Network response not ok.');
       })
-      .then(res => setExpensesArr(res))
+      .then(res => setCategoriesArr(res))
       .catch(err => console.log(err))
   }, []);
 
@@ -61,7 +61,7 @@ const Expenses = (props) => {
         <NewCategoryModal iconOptions={iconOptions} colorOptions={colorOptions} />
       </GridItem>
 
-      {expensesArr.map(exp => (
+      {categoriesArr.map(exp => (
         <CategoryCard key={exp.id} expense={exp} iconOptions={iconOptions} colorOptions={colorOptions} />
       ))}
     </GridContainer>
