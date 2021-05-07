@@ -14,7 +14,7 @@ import GridItem from '../components/Grid/GridItem';
 import NewCategoryModal from '../containers/Dashboard/NewCategoryModal';
 import CategoryCard from '../containers/Dashboard/CategoryCard';
 
-const Expenses = (props) => {
+const Categories = (props) => {
   const { openModal } = props;
   const [ categoriesArr, setCategoriesArr ] = useState([]);
   useEffect(() => {
@@ -68,4 +68,4 @@ const Expenses = (props) => {
   );
 };
 
-export default Expenses;
+export default Categories;
