@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {openModal} from '../redux/actions';
-import Expenses from '../views/Expenses';
+import Expenses from '../views/Categories';
 
 const mapStateToProps = (state) => ({
   expenseCategories: state.expenseCategories,

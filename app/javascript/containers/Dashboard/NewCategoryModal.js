@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import NewCategoryModal from '../../components/Dashboard/NewCategoryModal';
-import {postExpenseCat, closeModal} from '../../redux/actions';
+import {postCategory, closeModal} from '../../redux/actions';
 
 const mapStateToProps = (state) => ({
   isOpen: state.isOpen,
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
-  postExpenseCat: (form) => dispatch(postExpenseCat(form)),
+  postCategory: (form) => dispatch(postCategory(form)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewCategoryModal);

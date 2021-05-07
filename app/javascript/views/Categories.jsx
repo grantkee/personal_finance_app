@@ -12,13 +12,13 @@ import ShoppingCartRoundedIcon from '@material-ui/icons/ShoppingCartRounded';
 import GridContainer from '../components/Grid/GridContainer';
 import GridItem from '../components/Grid/GridItem';
 import NewCategoryModal from '../containers/Dashboard/NewCategoryModal';
-import ExpenseCard from '../containers/Dashboard/ExpenseCard';
+import CategoryCard from '../containers/Dashboard/CategoryCard';
 
 const Expenses = (props) => {
   const { openModal } = props;
   const [ expensesArr, setExpensesArr ] = useState([]);
   useEffect(() => {
-    const uri = '/expenses';
+    const uri = '/categories';
     fetch(uri)
       .then(res => {
         if (res.ok) {
@@ -62,7 +62,7 @@ const Expenses = (props) => {
       </GridItem>
 
       {expensesArr.map(exp => (
-        <ExpenseCard key={exp.id} expense={exp} iconOptions={iconOptions} colorOptions={colorOptions} />
+        <CategoryCard key={exp.id} expense={exp} iconOptions={iconOptions} colorOptions={colorOptions} />
       ))}
     </GridContainer>
   );

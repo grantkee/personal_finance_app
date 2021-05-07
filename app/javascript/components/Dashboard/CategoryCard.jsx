@@ -15,7 +15,7 @@ import styles from '../../useStyles/dashboardStyle';
 
 const useStyles = makeStyles(styles);
 
-const ExpenseCard = (props) => {
+const CategoryCard = (props) => {
   const classes = useStyles();
   const { expense, iconOptions, colorOptions } = props;
   console.log('expense:', expense);
@@ -63,4 +63,4 @@ const ExpenseCard = (props) => {
   );
 }
 
-export default ExpenseCard;
+export default CategoryCard;

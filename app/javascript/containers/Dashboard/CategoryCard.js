@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import ExpenseCard from '../../components/Dashboard/ExpenseCard';
+import CategoryCard from '../../components/Dashboard/CategoryCard';
 // import { createExpenseCard } from '../../redux/actions';
 
 const mapStateToProps = (state) => ({
@@ -10,4 +10,4 @@ const mapDispatchToProps = dispatch => ({
   // createExpenseCard: (form) => dispatch(createExpenseCard(form)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExpenseCard);
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryCard);

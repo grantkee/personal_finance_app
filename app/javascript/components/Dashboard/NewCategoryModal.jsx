@@ -21,7 +21,7 @@ const useStyles = makeStyles(styles);
 
 const NewCategoryModal = (props) => {
   const classes = useStyles();
-  const { isOpen, closeModal, postExpenseCat, iconOptions, colorOptions } = props;
+  const { isOpen, closeModal, postCategory, iconOptions, colorOptions } = props;
   const [ color, setColor ] = useState('primary');
   const [ icon, setIcon ] = useState('a');
   const [ input, setInput ] = useState({income: false});
@@ -46,7 +46,7 @@ const NewCategoryModal = (props) => {
       // income: false,
     };
     const form = Object.assign(input, remainingInfo);
-    postExpenseCat(form);
+    postCategory(form);
     setColor('primary');
     setIcon('a');
     closeModal();
@@ -54,7 +54,7 @@ const NewCategoryModal = (props) => {
 
   return (
     <Dialog open={isOpen} onClose={closeModal} disableBackdropClick aria-labelledby="form-dialog-title">
-      <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+      <DialogTitle id="form-dialog-title">Add Category</DialogTitle>
       <DialogContent>
         <DialogContentText>
           To subscribe to this website, please enter your email address here. We will send updates
@@ -98,7 +98,7 @@ const NewCategoryModal = (props) => {
           Cancel
         </Button>
         <Button onClick={handleSubmit} color="primary">
-          Subscribe
+          Add Category
         </Button>
       </DialogActions>
     </Dialog>
@@ -110,7 +110,7 @@ export default NewCategoryModal;
 NewCategoryModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func,
-  postExpenseCat: PropTypes.func.isRequired,
+  postCategory: PropTypes.func.isRequired,
   iconOptions: PropTypes.object.isRequired,
   colorOptions: PropTypes.object.isRequired,
 };

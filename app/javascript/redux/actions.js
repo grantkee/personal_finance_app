@@ -8,11 +8,11 @@ export const closeModal = () => ({
   value: false
 });
 
-export const postExpenseCat = (form) => {
+export const postCategory = (form) => {
   const token = document.querySelector('meta[name="csrf-token"]').content;
   return (
     dispatch => {
-      fetch('/expenses', {
+      fetch('/categories', {
         method: 'POST',
         headers: {
           'X-CSRF-TOKEN': token,
