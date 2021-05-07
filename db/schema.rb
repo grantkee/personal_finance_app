@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_28_205253) do
+ActiveRecord::Schema.define(version: 2021_05_07_190519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2021_03_28_205253) do
     t.boolean "fund"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_expenses_on_category_id"
     t.index ["expense_category_id"], name: "index_expenses_on_expense_category_id"
   end
 
@@ -60,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_03_28_205253) do
   end
 
   add_foreign_key "due_dates", "expenses", column: "category_expense_id"
+  add_foreign_key "expenses", "categories"
   add_foreign_key "expenses", "categories", column: "expense_category_id"
   add_foreign_key "reoccurings", "transactions"
   add_foreign_key "transactions", "expenses", column: "category_expense_id"
