@@ -3,7 +3,7 @@ import CategoryCard from '../../components/Dashboard/CategoryCard';
 // import { createExpenseCard } from '../../redux/actions';
 
 const mapStateToProps = (state) => ({
-  isOpen: state.isOpen,
+  // isOpen: state.isOpen,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -3,7 +3,7 @@ import {openModal} from '../redux/actions';
 import Expenses from '../views/Categories';
 
 const mapStateToProps = (state) => ({
-  expenseCategories: state.expenseCategories,
+  categories: state.categories,
 });
 
 const mapDispatchToProps = dispatch => ({

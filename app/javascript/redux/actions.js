@@ -28,12 +28,12 @@ export const postCategory = (form) => {
       })
       .then(res => {
         const action = {
-          type: 'ADD_EXPENSE_CAT',
+          type: 'ADD_CATEGORY',
           value: res.data,
         }
         dispatch(action);
       })
-      .then(res => props.history.push(`/expenses/${res.id}`))
+      .then(res => props.history.push(`/categories/${res.id}`))
       .catch(err => console.log(err.message))
     }
   );

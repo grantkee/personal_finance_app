@@ -1,6 +1,6 @@
 const initialState = {
   isOpen: false,
-  expenseCategories: [],
+  categories: [],
 };
 
 export default initialState;
