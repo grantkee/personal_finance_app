@@ -17,18 +17,18 @@ const useStyles = makeStyles(styles);
 
 const CategoryCard = (props) => {
   const classes = useStyles();
-  const { expense, iconOptions, colorOptions } = props;
-  console.log('expense:', expense);
+  const { category, iconOptions, colorOptions } = props;
+  console.log('category:', category);
   const {
     id,
     name,
     budget_total,
-    current_total,
+    // current_total --- sum of all expenses; does not need to persist in the DB
     color,
     icon,
     createdAt,
     lastUpdated,
-  } = expense;
+  } = category;
 
   return (
     <GridItem xs={12} sm={6} md={4}>

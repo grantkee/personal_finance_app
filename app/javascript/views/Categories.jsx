@@ -62,8 +62,8 @@ const Categories = (props) => {
         <NewCategoryModal iconOptions={iconOptions} colorOptions={colorOptions} />
       </GridItem>
 
-      {categoriesArr.map(exp => (
-        <CategoryCard key={exp.id} expense={exp} iconOptions={iconOptions} colorOptions={colorOptions} />
+      {categoriesArr.map(cat => (
+        <CategoryCard key={cat.id} category={cat} iconOptions={iconOptions} colorOptions={colorOptions} />
       ))}
     </GridContainer>
   );
