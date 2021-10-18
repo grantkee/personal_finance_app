@@ -98,4 +98,4 @@
 
 categories = %w(Income Giving Savings Investing Housing Transportation Food Personal Lifestyle Health Insurance Debt Subscriptions)
 
-categories.each { |cat| Category.create(name: cat)}
+categories.each { |cat| Category.create(name: cat, color: 0, icon: 0)}
