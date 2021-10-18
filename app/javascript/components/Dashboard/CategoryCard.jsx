@@ -30,6 +30,8 @@ const CategoryCard = (props) => {
     lastUpdated,
   } = category;
 
+  const current_total = 0;
+
   return (
     <GridItem xs={12} sm={6} md={4}>
       <Link to={`/expenses/${id}`} style={{textDecoration: 'none'}}>
