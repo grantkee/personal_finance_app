@@ -30,11 +30,7 @@ const colorOptionsStyle = {
     margingRight: '5px',
     borderRadius: '50%',
   },
-  a: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
+  badge: {
     '&:active': {
       backgroundColor: blackColor,
     },
@@ -42,78 +38,10 @@ const colorOptionsStyle = {
       color: blackColor,
     },
   },
-  b: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
-  c: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
-  d: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
-  e: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
-  f: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
-  g: {
-    '&.Mui-checked': {
-      color: blackColor,
-      border: `3px solid ${blackColor}`,
-    },
-    '&:active': {
-      backgroundColor: blackColor,
-    },
-    '&:hover': {
-      color: blackColor,
-    },
-  },
+  active: {
+    color: blackColor,
+    border: `3px solid ${blackColor}`,
+  }
 };
 
 export default colorOptionsStyle;

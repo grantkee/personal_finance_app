@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
-
 import styles from '../../useStyles/Modal/iconOptionsStyle';
 
 const useStyles = makeStyles(styles);
@@ -12,13 +11,14 @@ const IconOptions = (props) => {
   const options = Object.keys(iconOptions);
   const handleChange = (e) => {
     setIcon(e.target.value);
+    console.log('handleChange value', e.target.value);
   };
 
   return (
     <>
     <h5>Icon:</h5>
       <div className={classes.container}>
-        {options.map(o => {
+        {options.map((o, idx) => {
           return (
             <div key={o} className={`${classes.itemContainer} ${classes[o]}`}>
               <Radio
@@ -26,7 +26,7 @@ const IconOptions = (props) => {
                 className={`${classes.badge} ${classes[o]} ${icon === o ? classes.active : ''}`}
                 checked={icon === o}
                 onChange={handleChange}
-                value={o}
+                value={idx}
                 color="default"
                 icon={iconOptions[o]}
                 checkedIcon={iconOptions[o]}

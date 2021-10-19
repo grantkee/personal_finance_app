@@ -10,7 +10,9 @@ const useStyles = makeStyles(styles);
 const ColorOptions = (props) => {
   const { color, setColor, colorOptions } = props;
   const classes = useStyles();
-  const options = Object.values(colorOptions);
+  const options = Object.keys(colorOptions);
+  console.log('color options', options);
+  console.log('color:', color);
 
   const handleChange = (e) => {
     setColor(e.target.value);
@@ -20,15 +22,15 @@ const ColorOptions = (props) => {
     <>
       <h5>Color:</h5>
       <div className={classes.container}>
-        {options.map(o => {
+        {options.map((o, idx) => {
           return (
             <div key={o} className={`${classes.itemContainer} ${classes[o]}`}>
               <Radio
                 key={o}
-                className={`${classes.badge} ${classes[o]} ${color === o ? classes.active : ''}`}
+                className={`${classes[colorOptions[o]]} ${color === o ? classes.active : ''}`}
                 checked={color === o}
                 onChange={handleChange}
-                value={o}
+                value={idx}
                 color="default"
                 checkedIcon={<DoneIcon />}
               />

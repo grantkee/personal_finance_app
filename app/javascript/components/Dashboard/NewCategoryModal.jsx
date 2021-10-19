@@ -22,8 +22,8 @@ const useStyles = makeStyles(styles);
 const NewCategoryModal = (props) => {
   const classes = useStyles();
   const { isOpen, closeModal, postCategory, iconOptions, colorOptions } = props;
-  const [ color, setColor ] = useState('primary');
-  const [ icon, setIcon ] = useState('a');
+  const [ color, setColor ] = useState(0);
+  const [ icon, setIcon ] = useState(0);
   const [ input, setInput ] = useState({income: false});
 
 
@@ -47,8 +47,8 @@ const NewCategoryModal = (props) => {
     };
     const form = Object.assign(input, remainingInfo);
     postCategory(form);
-    setColor('primary');
-    setIcon('a');
+    // setColor(0); // should be an integer
+    // setIcon(0); // should be an integer
     closeModal();
   };
 
@@ -57,8 +57,7 @@ const NewCategoryModal = (props) => {
       <DialogTitle id="form-dialog-title">Add Category</DialogTitle>
       <DialogContent>
         <DialogContentText>
-          To subscribe to this website, please enter your email address here. We will send updates
-          occasionally.
+          Add a new category to keep track of your expenses.
         </DialogContentText>
         <TextField
           autoFocus

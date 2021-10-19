@@ -37,14 +37,13 @@ const colorOptionsStyle = {
     margingRight: '5px',
     borderRadius: '50%',
   },
+  active: {
+    color: whiteColor,
+    border: `3px solid ${blackColor}`,
+  },
   primary: {
     color: primaryColor[2],
     backgroundColor: primaryColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: primaryColor[0],
     },
@@ -56,11 +55,6 @@ const colorOptionsStyle = {
   warning: {
     color: warningColor[2],
     backgroundColor: warningColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: warningColor[0],
     },
@@ -72,11 +66,6 @@ const colorOptionsStyle = {
   danger: {
     color: dangerColor[2],
     backgroundColor: dangerColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: dangerColor[0],
     },
@@ -88,11 +77,6 @@ const colorOptionsStyle = {
   success: {
     color: successColor[2],
     backgroundColor: successColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: successColor[0],
     },
@@ -104,11 +88,6 @@ const colorOptionsStyle = {
   info: {
     color: infoColor[2],
     backgroundColor: infoColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: infoColor[0],
     },
@@ -120,11 +99,6 @@ const colorOptionsStyle = {
   rose: {
     color: roseColor[2],
     backgroundColor: roseColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: roseColor[0],
     },
@@ -136,11 +110,6 @@ const colorOptionsStyle = {
   gray: {
     color: grayColor[2],
     backgroundColor: grayColor[2],
-
-    '&.Mui-checked': {
-      color: whiteColor,
-      border: `3px solid ${blackColor}`,
-    },
     '&:active': {
       backgroundColor: grayColor[0],
     },
