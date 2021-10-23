@@ -164,6 +164,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.4)
   rspec-rails (>= 3.10.0)
   sass-rails (>= 6)
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
