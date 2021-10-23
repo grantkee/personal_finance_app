@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2021_10_18_193907) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "budget_total", default: 0
-    t.integer "color"
-    t.integer "icon"
+    t.integer "color", default: 0
+    t.integer "icon", default: 0
   end
 
   create_table "due_dates", force: :cascade do |t|
