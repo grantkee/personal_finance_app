@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
     )
   }
 
-  describe "Validations" do
+  context "Validations" do
     it "is valid with valid attributes" do
       expect(subject).to be_valid
     end
@@ -22,5 +22,9 @@ RSpec.describe User, type: :model do
       subject.email = nil
       expect(subject).to_not be_valid
     end
+  end
+
+  context "Associations" do
+    it { should have_many(:categories).without_validating_presence }
   end
 end
