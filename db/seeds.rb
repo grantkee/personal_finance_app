@@ -97,5 +97,5 @@
 # )
 
 categories = %w(Income Giving Savings Investing Housing Transportation Food Personal Lifestyle Health Insurance Debt Subscriptions)
-
-categories.each { |cat| Category.create(name: cat, color: 0, icon: 0)}
+User.create(email: "admin@test.com", password: "admin@test.com")
+categories.each { |cat| Category.create(name: cat, user_id: 1)}
