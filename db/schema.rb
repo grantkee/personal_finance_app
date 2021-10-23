@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_18_193907) do
+ActiveRecord::Schema.define(version: 2021_10_23_181931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,13 @@ ActiveRecord::Schema.define(version: 2021_10_18_193907) do
     t.bigint "expense_id", null: false
     t.index ["category_expense_id"], name: "index_transactions_on_category_expense_id"
     t.index ["expense_id"], name: "index_transactions_on_expense_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "password"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "due_dates", "expenses", column: "category_expense_id"
