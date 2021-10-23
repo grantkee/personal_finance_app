@@ -9,15 +9,12 @@ require 'rails_helper'
 #   Can I implement something more efficiently?
 
 RSpec.describe Category, type: :model do
-  # before(:each) do
-  #   @cat = Category.new(name: "lifestyle")
-  # end
-
-  subject { described_class.new }
+  subject {
+    described_class.new(name: "lifestyle")
+  }
 
   context "when creating a new instance" do
-    it "is valid with valid attributes" do
-      subject.name = "lifestyle"
+    it "is valid with valid attributes (name)" do
       expect(subject).to be_valid
     end
 
@@ -25,18 +22,18 @@ RSpec.describe Category, type: :model do
       subject.name = nil
       expect(subject).to_not be_valid
     end
-  end
 
-  # use when, with, or without for context
-  context ".name" do
-    it "should return category name" do
-      subject.name = "lifestyle"
-      expect(subject.name).to eq("lifestyle")
+    it "has a budget_total of 0 by default" do
+      expect(subject.budget_total).to eq(0)
+    end
+
+    it "color is 0 by default" do
+      expect(subject.color).to eq(0)
+    end
+
+    it "icon is 0 by default" do
+      expect(subject.icon).to eq(0)
     end
   end
 
-  # use when, with, or without for context
-  # context "when given a name"
-    # it {is_expected.to }
-  # end
 end
