@@ -12,18 +12,22 @@ RSpec.describe Expense, type: :model do
   let(:user) {
     User.create(email: "batman@cave.com", password: "pw1234")
   }
+
+  let(:category) {
+    Category.create(name: "food", user_id: user.id)
+  }
+
   subject {
-    described_class.new
+    described_class.new(id: 1, name: "groceries", category_id: category.id)
   }
 
   context "Validations" do
-    it { should validate_presence_of(:name)} # null: false
-    it { should validate_presence_of(:expected_total)} # default to 0
-    it { should validate_presence_of(:fund)} # null: false, default: false
-    it { should validate_presence_of(:category_id)} # null: false
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:expected_total) }
+    it { should validate_presence_of(:fund) }
   end
 
-  context "when creating a new instance" do
+  context ".new()" do
     it "is valid with valid attributes (name)" do
       expect(subject).to be_valid
     end
@@ -33,15 +37,20 @@ RSpec.describe Expense, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it "is not valid without an email" do
-      subject.email = nil
+    it "is not valid without an expected total" do
+      subject.expected_total = nil
+      expect(subject).to_not be_valid
+    end
+
+    it "is not valid without a fund" do
+      subject.fund = nil
       expect(subject).to_not be_valid
     end
   end
 
   context "Associations" do
     it { should belong_to(:category) }
-    # it { should have_one(:due_date) }
+    # it { should have_one(:due_date) } => in due_date.spec: it { should belong_to(:expense).optional }
   end
 
 end

@@ -13,7 +13,7 @@ RSpec.describe Category, type: :model do
     User.create(email: "batman@cave.com", password: "pw1234")
   }
   subject {
-    described_class.new(id: 1, name: "lifestyle", user_id: user.id)
+    described_class.new(name: "lifestyle", user_id: user.id)
   }
 
   context "when creating a new instance" do
