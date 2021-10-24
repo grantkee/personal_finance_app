@@ -26,9 +26,9 @@ RSpec.describe Transaction, type: :model do
   }
 
   context "Validations" do
-    it { should validate_presence_of(:name) } # change_column_null :transactions, :name, false
-    it { should validate_presence_of(:amount) } # change_column_default :transactions, :amount, 0  ---- change_column_null :transactions, :amount, false
-    it { should validate_presence_of(:transaction_date) } # add_column :transactions, :transaction_date, :datetime, default: 'now()', precision: 6, null: false
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:amount) }
+    it { should validate_presence_of(:transaction_date) }
   end
 
   context ".new()" do
