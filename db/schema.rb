@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_23_203347) do
+ActiveRecord::Schema.define(version: 2021_10_24_185738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2021_10_23_203347) do
   end
 
   create_table "expenses", force: :cascade do |t|
-    t.bigint "expense_category_id", null: false
     t.string "name", null: false
     t.integer "expected_total", default: 0, null: false
     t.text "notes"
@@ -44,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_10_23_203347) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_expenses_on_category_id"
-    t.index ["expense_category_id"], name: "index_expenses_on_expense_category_id"
   end
 
   create_table "reoccurings", force: :cascade do |t|
@@ -57,13 +55,14 @@ ActiveRecord::Schema.define(version: 2021_10_23_203347) do
 
   create_table "transactions", force: :cascade do |t|
     t.bigint "category_expense_id", null: false
-    t.string "name"
-    t.integer "amount"
+    t.string "name", null: false
+    t.integer "amount", default: 0, null: false
     t.text "note"
     t.boolean "deleted"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "expense_id", null: false
+    t.datetime "transaction_date", precision: 6, null: false
     t.index ["category_expense_id"], name: "index_transactions_on_category_expense_id"
     t.index ["expense_id"], name: "index_transactions_on_expense_id"
   end
@@ -78,7 +77,6 @@ ActiveRecord::Schema.define(version: 2021_10_23_203347) do
   add_foreign_key "categories", "users"
   add_foreign_key "due_dates", "expenses", column: "category_expense_id"
   add_foreign_key "expenses", "categories"
-  add_foreign_key "expenses", "categories", column: "expense_category_id"
   add_foreign_key "reoccurings", "transactions"
   add_foreign_key "transactions", "expenses"
   add_foreign_key "transactions", "expenses", column: "category_expense_id"
