@@ -1,5 +1,9 @@
 require 'rails_helper'
 
+
+# https://rubyyagi.com/rspec-request-spec/
+
+
 RSpec.describe "Category", type: :request do
   
   let(:user) {
