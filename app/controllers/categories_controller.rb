@@ -16,9 +16,11 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to @category
+      # redirect_to @category
+      render json: @category, status: :created, location: @category
     else
-      render :new, status: :unprocessable_entity
+      # render :new, status: :unprocessable_entity
+      render json: @category.errors, status: :unprocessable_entity
     end
   end
 

@@ -20,6 +20,7 @@ RSpec.describe "Category", type: :request do
       get categories_path(id: user.id)
       expect(response).to be_successful
       # expect(response).to have_http_status(200)
+      # expect(respons.status).to eq(200)
     end
     
     it "returns json of user's Categories and Expenses" do
@@ -37,8 +38,11 @@ RSpec.describe "Category", type: :request do
 
       post categories_path, params: category_params.to_json, headers: headers
       json = JSON.parse(response.body)
-      expect(response).to be_successful
-      # expect(response).to have_http_status(200)
+      expect(response).to be_created
+      # expect(response).to have_http_status(201)
+
+      expect(Category.count).to eq(1)
+      # expect(Category.last.name).to eq("food")
     end
   end
 
@@ -63,8 +67,11 @@ RSpec.describe "Category", type: :request do
       }}
 
       patch category_path(user), params: new_category_params.to_json, headers: headers
-      json = JSON.parse(response.body)
-      expect(json["cat"]).to include("name": "new food")
+      # json = JSON.parse(response.body)
+      # expect(json["cat"]).to include("name": "new food")
+
+      json = JSON.parse(response.body).deep_symbolize_keys
+      expect(json[:name]).to eq('new food')
     end
   end
   
